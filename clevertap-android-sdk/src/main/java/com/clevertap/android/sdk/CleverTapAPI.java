@@ -635,10 +635,10 @@ public class CleverTapAPI implements CTInAppNotification.CTInAppNotificationList
         for (PushType pushType : enabledPushTypes) {
             switch (pushType) {
                 case GCM:
-                    doGCMRefresh();
+                    
                     break;
                 case FCM:
-                    doFCMRefresh();
+                    
                     break;
                 default:
                     //no-op
@@ -664,7 +664,7 @@ public class CleverTapAPI implements CTInAppNotification.CTInAppNotificationList
                     cacheFCMToken(freshToken);
 
                     // better safe to always force a push from here
-                    pushFCMDeviceToken(freshToken, true, true);
+                    
 
                     try {
                         deviceTokenDidRefresh(freshToken, PushType.FCM);
@@ -4467,10 +4467,10 @@ public class CleverTapAPI implements CTInAppNotification.CTInAppNotificationList
         for (PushType pushType : enabledPushTypes) {
             switch (pushType) {
                 case GCM:
-                    pushGCMDeviceToken(null, register, force);
+                    
                     break;
                 case FCM:
-                    pushFCMDeviceToken(null, register, force);
+                    
                     break;
                 default:
                     //no-op
